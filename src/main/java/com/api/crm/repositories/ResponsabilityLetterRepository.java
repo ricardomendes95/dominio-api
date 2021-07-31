@@ -5,18 +5,23 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.api.crm.database.IDatabase;
 import com.api.crm.model.ResponsabilityLetter;
 import com.api.crm.repositories.interfaces.IResponsabilityLetterRepository;
 
+@Component
 public class ResponsabilityLetterRepository implements IResponsabilityLetterRepository {
-	private Connection connection;
+	@Autowired
+	private IDatabase database;
 	
-	public ResponsabilityLetterRepository(Connection connection) {
-		this.connection = connection;
-	}	
 
 	@Override
 	public ResponsabilityLetter getResponsabilityLetter() {
+		Connection connection = database.getConnection();
+		
 		PreparedStatement statement = null;
 		try {
 			statement = connection.prepareStatement("SELECT * FROM BETHADBA.geempre");
@@ -43,6 +48,11 @@ public class ResponsabilityLetterRepository implements IResponsabilityLetterRepo
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public String getHelloWorld() {
+		return "Hello, world";
 	}
 	
 }
