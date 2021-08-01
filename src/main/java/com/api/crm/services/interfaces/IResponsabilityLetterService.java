@@ -1,8 +1,9 @@
 package com.api.crm.services.interfaces;
 
+import java.util.List;
+
 import com.api.crm.model.ResponsabilityLetter;
 
 public interface IResponsabilityLetterService {
-	ResponsabilityLetter getResponsabilityLetter();
-	String getHelloWorld();
+	List<ResponsabilityLetter> getResponsabilityLetters(String lastUpdateDate, int crcType);
 }

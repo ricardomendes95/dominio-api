@@ -1,5 +1,7 @@
 package com.api.crm.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,13 +15,9 @@ public class ResponsabilityLetterService implements IResponsabilityLetterService
 	IResponsabilityLetterRepository responsabilityLetterRepository;
 	
 	@Override
-	public ResponsabilityLetter getResponsabilityLetter() {
-		return null;
+	public List<ResponsabilityLetter> getResponsabilityLetters(String lastUpdateDate, int crcType) {
+		return responsabilityLetterRepository.getResponsabilityLetters(lastUpdateDate, crcType);
 	}
-
-	@Override
-	public String getHelloWorld() {
-		return responsabilityLetterRepository.getHelloWorld();
-	}
+	
 
 }
