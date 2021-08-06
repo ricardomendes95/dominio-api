@@ -6,7 +6,6 @@ public class ResponsabilityLetter {
 	private String cpfLegCliente;
 	private String cnpjCliente;
 	private String cargoResponsavel;
-	private String sistemaGestao;
 	private String crcContador;
 	private String cidadeCliente;
 	
@@ -16,7 +15,6 @@ public class ResponsabilityLetter {
 		String cpfLegCliente,
 		String cnpjCliente,
 		String cargoResponsavel,
-		String sistemaGestao,
 		String crcContador,
 		String cidadeCliente
 	) {
@@ -25,7 +23,6 @@ public class ResponsabilityLetter {
 		this.cpfLegCliente = cpfLegCliente;
 		this.cnpjCliente = cnpjCliente;
 		this.cargoResponsavel = cargoResponsavel;
-		this.sistemaGestao = sistemaGestao;
 		this.crcContador = crcContador;
 		this.cidadeCliente = cidadeCliente;
 	}
@@ -63,12 +60,7 @@ public class ResponsabilityLetter {
 	public void setCargoResponsavel(String cargoResponsavel) {
 		this.cargoResponsavel = cargoResponsavel;
 	}
-	public String getSistemaGestao() {
-		return sistemaGestao;
-	}
-	public void setSistemaGestao(String sistemaGestao) {
-		this.sistemaGestao = sistemaGestao;
-	}
+	
 	public String getCrcContador() {
 		return crcContador;
 	}

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.api.crm.model.CompanyResponsabilityLatter;
 import com.api.crm.model.ResponsabilityLetter;
 import com.api.crm.services.interfaces.IResponsabilityLetterService;
 
@@ -21,6 +22,11 @@ public class ResponsabilityLetterController {
 	@GetMapping
 	public List<ResponsabilityLetter> listResponsabilityLetters(@RequestParam("lastUpdateDate") String lastUpdateDate, @RequestParam("crcType") int crcType) {
 		return responsabilityLetterService.getResponsabilityLetters(lastUpdateDate, crcType);
+	}
+	
+	@GetMapping("/company")
+	public CompanyResponsabilityLatter getCompany(@RequestParam("id") int id) {	
+		return responsabilityLetterService.getCompany(id);
 	}
 
 }

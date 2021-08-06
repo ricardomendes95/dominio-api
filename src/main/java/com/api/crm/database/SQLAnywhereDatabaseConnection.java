@@ -30,7 +30,7 @@ public class SQLAnywhereDatabaseConnection implements IDatabase {
 	public Connection getConnection() {
 		try {
 			connection = DriverManager.getConnection(getDatabaseURL());
-		
+			System.out.println("criou a conection");
 			return connection;
 		} catch (SQLException e) {
 			e.printStackTrace();
