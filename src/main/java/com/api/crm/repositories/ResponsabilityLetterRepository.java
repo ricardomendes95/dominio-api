@@ -150,6 +150,7 @@ public class ResponsabilityLetterRepository implements IResponsabilityLetterRepo
 			}
 			
 			statement.close();
+			System.out.println(companyResponsabilityLatter);
 			
 			return companyResponsabilityLatter;
 		} catch (SQLException e) {
