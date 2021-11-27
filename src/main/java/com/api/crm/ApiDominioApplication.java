@@ -8,6 +8,7 @@ public class ApiDominioApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiDominioApplication.class, args);
+	      System.out.println("aplicação iniciada!");
 	}
 
 }
